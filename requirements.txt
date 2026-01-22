@@ -1,0 +1,20 @@
+numpy==1.25.0
+pandas==2.0.2
+plotly==6.5.2
+Requests==2.32.5
+scikit_learn==1.8.0
+streamlit==1.32.2
+dvc
+mlflow==2.2.2
+notebook
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
+scipy
+Flask
+Flask-Cors
+gdown
+-e .
