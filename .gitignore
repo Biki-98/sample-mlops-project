@@ -215,4 +215,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-which_got_character_are_you.egg-info/
+which_got_character_are_you.egg-info/artifacts/
