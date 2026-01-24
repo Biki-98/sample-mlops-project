@@ -21,9 +21,9 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
-try:
-    1 / 0
-except Exception as e:
-    logger.exception("Division failed")
-    raise CustomException(e, sys)
+# try:
+#     1 / 0
+# except Exception as e:
+#     logger.exception("Division failed")
+#     raise CustomException(e, sys)
 

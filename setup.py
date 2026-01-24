@@ -26,7 +26,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "sample-mlops-project"
 AUTHOR_USER_NAME = "Biki-98"
-SRC_REPO = "student score predictor"
+SRC_REPO = "student_score_predictor"
 AUTHOR_EMAIL = "parthaskill98@gmail.com"
 
 setuptools.setup(
