@@ -5,7 +5,7 @@ import logging
 # logging string
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
-project_name = "student score predictor"
+project_name = "student_score_predictor"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
