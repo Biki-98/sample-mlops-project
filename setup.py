@@ -26,7 +26,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "sample-mlops-project"
 AUTHOR_USER_NAME = "Biki-98"
-SRC_REPO = "which_got_character_are_you"
+SRC_REPO = "student score predictor"
 AUTHOR_EMAIL = "parthaskill98@gmail.com"
 
 setuptools.setup(
@@ -36,7 +36,7 @@ setuptools.setup(
     author_email=AUTHOR_EMAIL,
     description="A small python package for a sample MLOPs project",
     long_description=description,
-    long_description_content = "text/markdown",
+    # long_description_content = "text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     # package_dir={"":"src"},
     # packages=setuptools.find_packages(where="src"),
