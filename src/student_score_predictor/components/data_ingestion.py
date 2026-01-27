@@ -47,11 +47,6 @@ class DataIngestion:
             raise CustomException(e,sys)
 
 
-if __name__=="__main__":
-    obj = DataIngestion()
-    obj.start_data_ingestion()
-
-
 
 
 # # Other way to do the above
