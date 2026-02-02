@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import dill
 import json
+import yaml
 from pathlib import Path
 from typing import Any
 from exception import CustomException
@@ -16,6 +17,14 @@ def save_object(file_path, obj):
 
         with open(file_path,"wb") as file_obj:
             dill.dump(obj, file_obj)
+    
+    except Exception as e:
+        raise CustomException(e,sys)
+    
+def load_object(file_path):
+    try:
+        with open(file_path,"rb") as f:
+            return dill.load(f)
     
     except Exception as e:
         raise CustomException(e,sys)
@@ -45,3 +54,9 @@ def save_json(data: Any, file_path: str, indent: int = 4) -> str:
         raise CustomException(e, sys)
 
 
+def read_yaml(file_path: str) -> dict:
+    """
+    Read a YAML file and return contents as dict.
+    """
+    with open(file_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
