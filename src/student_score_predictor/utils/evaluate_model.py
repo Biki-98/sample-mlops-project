@@ -25,7 +25,7 @@ def evaluate_model(X_train,y_train,X_test,y_test,models,params,hyperparameter_tu
     algorithm/model also.
     """
     try:
-        model_report = {}
+        raw_model_report = {}
         for model_name, model in models.items():
             if hyperparameter_tuning:
                 logging.info(f"Hyperparameter tuning of {model_name} has started.")
@@ -61,12 +61,13 @@ def evaluate_model(X_train,y_train,X_test,y_test,models,params,hyperparameter_tu
             
             logging.info(f"Evaluation of {model_name} based on R2-score is completed successfully.")
 
-            model_report[model_name] = {"best_pred_score": test_model_score,
-                                        "best_params": best_params,
-                                        "train_score": train_model_score
-                                        }
+            raw_model_report[model_name] = {"estimator": estimator,
+                                            "best_pred_score": test_model_score,
+                                            "best_params": best_params,
+                                            "train_score": train_model_score
+                                            }
 
-        return model_report
+        return raw_model_report
 
     except Exception as e:
          raise CustomException(e, sys)
