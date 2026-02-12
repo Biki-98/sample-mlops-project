@@ -219,3 +219,4 @@ which_got_character_are_you.egg-info/
 artifacts/
 .vscode/
 got/
+mlruns/
