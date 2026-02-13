@@ -57,7 +57,7 @@ class ModelTrainer:
                                                     X_test=X_test, y_test=y_test,
                                                     models=models,
                                                     params=params,
-                                                    hyperparameter_tuning=True)
+                                                    hyperparameter_tuning=False)
             
             logging.info("Training + Prediction + Evaluation of the models completed successfully.")
 
