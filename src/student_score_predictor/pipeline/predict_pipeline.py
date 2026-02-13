@@ -19,15 +19,15 @@ class PredictPipeline:
             model=load_best_model(best_model_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
 
-            print("Starting prediction data preprocessing and prediction.")
+            logging.info("Starting prediction data preprocessing and prediction.")
             
             data_preprocessed = preprocessor.transform(features)
             preds = model.predict(data_preprocessed)
             
-            print("Finished prediction data preprocessing and prediction.")
+            logging.info("Finished prediction data preprocessing and prediction.")
             
             return preds
-        
+            
         except Exception as e:
             raise CustomException(e,sys)
 
