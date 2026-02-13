@@ -1,0 +1,70 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python -m src.student_score_predictor.pipeline.train_pipeline
+    deps:
+    - path: params.yaml
+      hash: md5
+      md5: 13d45d27675cec120c039583209e7fe0
+      size: 1426
+    - path: research/data/stud.csv
+      hash: md5
+      md5: 72e8feb9e6dd40e0cc9b4563bdece775
+      size: 72036
+    - path: src/exception.py
+      hash: md5
+      md5: 7b19f782a0bb08770e032d49e8713e09
+      size: 986
+    - path: src/logger.py
+      hash: md5
+      md5: f19d2c49dbc51870879faecef1c832a6
+      size: 635
+    - path: src/student_score_predictor/components/data_ingestion.py
+      hash: md5
+      md5: 4fcd8b79a76e24a168281bcc23ef44fd
+      size: 2519
+    - path: src/student_score_predictor/components/data_transformation.py
+      hash: md5
+      md5: 92834e5a370c8c07d9d6e91971c1a69c
+      size: 4351
+    - path: src/student_score_predictor/components/model_trainer.py
+      hash: md5
+      md5: 8a1685079c1aafcc6a00d779297fc9b4
+      size: 3716
+    - path: src/student_score_predictor/pipeline/train_pipeline.py
+      hash: md5
+      md5: 0863c8047bea01be08e98ab9ff5de69e
+      size: 1364
+    - path: src/student_score_predictor/utils/evaluate_model.py
+      hash: md5
+      md5: 356e968ee9ad6b9aca9b892bf729edf2
+      size: 3852
+    - path: src/student_score_predictor/utils/file_utils.py
+      hash: md5
+      md5: 9aa11fdb6ade1219e4fd74c28c78213f
+      size: 3622
+    outs:
+    - path: artifacts/best_model.dill
+      hash: md5
+      md5: ce8c832856f69b043db55a264d7e22ad
+      size: 50
+    - path: artifacts/data.csv
+      hash: md5
+      md5: ce689f302060118e9582e8b6d09b6198
+      size: 57021
+    - path: artifacts/model_report.json
+      hash: md5
+      md5: 0d95e2e47ad031970602d2fb4b25d253
+      size: 1102
+    - path: artifacts/preprocessor.pkl
+      hash: md5
+      md5: a65bc767fe1898cbe5948403b8982ea0
+      size: 3587
+    - path: artifacts/test.csv
+      hash: md5
+      md5: df5f3c37e6cbbb1e229c1e1541fe0b08
+      size: 45584
+    - path: artifacts/train.csv
+      hash: md5
+      md5: df5f3c37e6cbbb1e229c1e1541fe0b08
+      size: 45584
