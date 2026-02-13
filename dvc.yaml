@@ -1,0 +1,33 @@
+stages:
+  train:
+    cmd: python -m src.student_score_predictor.pipeline.train_pipeline
+    deps:
+      # raw dataset
+      - research/data/stud.csv
+
+      # code dependencies (so changes in code trigger repro)
+      - src/student_score_predictor/pipeline/train_pipeline.py
+      - src/student_score_predictor/components/data_ingestion.py
+      - src/student_score_predictor/components/data_transformation.py
+      - src/student_score_predictor/components/model_trainer.py
+
+      # if these exist and are used by trainer/transformation, include them too
+      - src/student_score_predictor/utils/evaluate_model.py
+      - src/student_score_predictor/utils/file_utils.py
+      - src/exception.py
+      - src/logger.py
+      - params.yaml
+
+    outs:
+      # produced by DataIngestion
+      - artifacts/data.csv
+      - artifacts/train.csv
+      - artifacts/test.csv
+
+      # produced by DataTransformation / ModelTrainer
+      - artifacts/preprocessor.pkl:
+          cache: false
+      - artifacts/best_model.dill:
+          cache: false
+      - artifacts/model_report.json:
+          cache: false
